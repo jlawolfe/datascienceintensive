@@ -1,0 +1,40 @@
+Introduction
+============
+
+We're going to play with some interesting datasets compared with the previous one (holidays in all countries). This dataset is about stats from the English Premier League football. It contains massive numeric data such as goals, shots, shots on target, fouls committed, yellow cards, red cards, and bookings from home team and away team separately. I've merge data from 3 seasons into 1 dataset for we have more options to dig for data.
+
+
+Story
+=====
+
+Occasionally in football history, you may encounter teams that make the biggest blunder of the season, but rarely a controversial blunder committed by the football owner. One of such cases would be Vincent Tan, a Malaysian Businessman who owns the team Cardiff City. Since his ownership, he had made several controversial changes to the club with no solid empirical evidences. Once, he made a suggestion to his manager to have the team practise on shooting only, because he stated "if you shoot 100 times, at least one would go in the net". So let's test this hypothesis if it is true.
+
+
+Hypothesis Testing
+==================
+
+Based on his statement, we can interpret that if the team shoots more, the chances of winning is higher. We can also test the relationship between number of shots and higher rank in the league (because the more you win, the higher you rank). We will write the null hypothesis and alternate hypothesis as follows:
+
+H0 - there is no positive relationship between number of shots and league ranking.
+Ha - there is a positive relationship between number of shots and league ranking.
+
+We took the data from the most recent season (2014/2015) for this hypothesis testing. We calculated the average shots per game vs the team's rank power. 1st placing team will get rank power 20, last place gets 1. While Cardiff City isn't playing in the league this season, let's assume Vincent's philosophical statement is true. In the left correlation chart, the data shows that there is a positive relationship between average shots per match and rank power, with a correlation coefficient of 0.696. This shows the degree of relationship between the two variables is relatively strong, and we can reject the null hypothesis.
+
+Still, it just doesn't sound right. Having your team kicking the ball blindly towards the goal and praying that it will score isn't really going to guarantee trophies, so we can build a new hypothesis: the better the shots accuracy, the higher the team's rank power. So our hypothesis are written as below:
+
+H0 - there is no positive relationship between shots accuracy and league ranking.
+Ha - there is a positive relationship between shots accuracy and league ranking.
+
+The correlation chart on the right shows that there is a positive relationship between shots accuracy and rank power. What's better is that this scatterplot shows the dots are more align in a straight line compared to the left scatterplot. This means that the right scatterplot has a stronger correlation than the left, and the correlation coefficient value 0.910 proves just that.
+
+From a football maanger's perpective, it is a better decision to have the team practise the shooting quality rather than quantity, because it is proven with data that shots accuracy have very strong relationship towards winning trophies. In fact, if the team improves their shot accuracy by 2%, they would increase their rank by 3.
+
+
+Some Boxplots
+=============
+
+Let's take a look at something else. If what Vincent's statement is the absolute truth, then the 1st placing team would be shooting consistently in every match. We plotted the teams' shots on a boxplot. The left boxplot shows number of shots when playing at home (own stadium), and the right shows number of shots when playing away (visiting opponnet's stadium). The league standing is read from left to right, so CHE is the 1st placing and QPR is last place. As you can see, CHE did not really do a lot of shooting. The first 3 teams had the same median (2nd percentile value in its range), and the 3rd team ARS actually had more shots than CHE. the teams in the mid range have various median value and long whiskers, with range between 7 to 22 total shots.
+
+Comparing this data with shots when playing away, all teams have slightly lower total shots compared to playing at home. The range is between 5 to 17 when playing away, and 6 to 22 when playing home. This is probably because psychological impact when playing at home ground e.g. having your supporters cheering you. The boxes in the left boxplots is slight shorter, indicating the range of number of shots is less variant from the median, so the teams are quite consistent with the number of shots when playing at home comparing to away.
+
+There are a couple more insights you can get from this boxplot, but we'll just stop here for now.
